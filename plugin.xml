@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="aolian.zhouhao.scanplugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ScanPlugin</name>
+    <js-module name="ScanPlugin" src="www/ScanPlugin.js">
+        <clobbers target="cordova.plugins.ScanPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="ScanPlugin">
+                <param name="ios-package" value="ScanPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCode.h"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeHelperTool.h"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeHelperTool.m"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeScanManager.h"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeScanManager.m"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeScanningView.h"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/SGQRCodeScanningView.m"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/WCQRCodeScanningVC.h"></source-file>
+        <source-file src="src/ios/ScanCode/Controller/WCQRCodeScanningVC.m"></source-file>
+        <resource-file src="src/ios/ScanCode/Source/SGQRCode.bundle"></resource-file>
+        <source-file src="src/ios/ScanPlugin.m" />
+        <!-- frameworks -->
+        <framework src="AVFoundation.framework" />
+
+    </platform>
+</plugin>
